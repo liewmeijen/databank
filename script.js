@@ -1,6 +1,6 @@
 // Initialize Supabase
-const SUPABASE_URL = "YOUR_SUPABASE_URL"; // Replace with your Supabase URL
-const SUPABASE_KEY = "YOUR_SUPABASE_ANON_KEY"; // Replace with your Supabase anon key
+const SUPABASE_URL = "https://lpibhrzrbjcwzevtmdrd.supabase.co"; // Replace with your Supabase URL
+const SUPABASE_KEY = "sb_publishable_CUcqE0SgFD9NJO_VoqBqPQ_BpSvGzgp"; // Replace with your Supabase anon key
 
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
