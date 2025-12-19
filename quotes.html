@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Databank - Motivational Quotes</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>Databank - Motivational Quotes</h1>
+
+    <button id="logout-btn">Logout</button>
+
+    <h2>Add Quote</h2>
+    <form id="add-quote-form">
+      <input type="text" id="quote-text" placeholder="Quote" required />
+      <input type="text" id="quote-author" placeholder="Author" />
+      <button type="submit">Add Quote</button>
+    </form>
+
+    <h2>My Quotes</h2>
+    <ul id="quotes-list"></ul>
+  </div>
+
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="./quotes.js"></script>
+</body>
+</html>
