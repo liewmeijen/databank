@@ -1,13 +1,14 @@
-// Initialize Supabase
+// Supabase credentials
 const SUPABASE_URL = "https://lpibhrzrbjcwzevtmdrd.supabase.co";
 const SUPABASE_KEY = "sb_publishable_CUcqE0SgFD9NJO_VoqBqPQ_BpSvGzgp";
 
-// ✅ Get createClient from the global supabase object
-const { createClient } = supabase;
+// ✅ Get createClient from the global Supabase object
+const { createClient } = window.supabase;
 
-// ✅ Create your Supabase client (name it something else!)
+// ✅ Create client (DO NOT name it supabase)
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
 
+// DOM elements
 const loginForm = document.getElementById("login-form");
 const errorMessage = document.getElementById("error-message");
 
@@ -26,12 +27,7 @@ loginForm.addEventListener("submit", async (e) => {
     errorMessage.textContent = error.message;
     errorMessage.classList.remove("hidden");
   } else {
-    console.log("Logged in user:", data.user);
+    console.log("Login success:", data.user);
     window.location.href = "dashboard.html";
   }
-});
-
-// Sign up link
-document.getElementById("signup-link").addEventListener("click", () => {
-  window.location.href = "signup.html";
 });
