@@ -1,14 +1,12 @@
-// Supabase credentials
 const SUPABASE_URL = "https://lpibhrzrbjcwzevtmdrd.supabase.co";
 const SUPABASE_KEY = "sb_publishable_CUcqE0SgFD9NJO_VoqBqPQ_BpSvGzgp";
 
-// ✅ Use Supabase from the CDN (do NOT redeclare it)
+// Use global supabase object from CDN
 const supabaseClient = window.supabase.createClient(
   SUPABASE_URL,
   SUPABASE_KEY
 );
 
-// DOM elements
 const loginForm = document.getElementById("login-form");
 const errorMessage = document.getElementById("error-message");
 
@@ -30,4 +28,9 @@ loginForm.addEventListener("submit", async (e) => {
     console.log("Logged in:", data.user);
     window.location.href = "dashboard.html";
   }
+});
+
+// Optional signup link
+document.getElementById("signup-link").addEventListener("click", () => {
+  window.location.href = "signup.html";
 });
